@@ -12,7 +12,7 @@ const bot = new TelegramBot(token, { polling: true });
 
 bot.onText(/\/start/, (msg, match) => {
   const chatId = msg.chat.id;
-  const resp = `Вас приветсвует магазинчик *COSA NOSTRA*\nCпасибо, что заглянули к нам.\nЗдесь Вы можете ознакомиться с нашим ассортиментом,\nнайти контакты нашего чата и оператора!\nНаш сайт: http://rost-d.com/box/`;
+  const resp = `✔️ Вас приветсвует магазинчик *COSA NOSTRA*\nCпасибо, что заглянули к нам.\nЗдесь Вы можете ознакомиться с нашим ассортиментом,\nнайти контакты нашего чата и оператора!\nНаш сайт: http://rost-d.com/box/`;
 
   bot.sendMessage(chatId, resp, {
     parse_mode: 'Markdown',
