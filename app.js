@@ -44,7 +44,7 @@ bot.onText(/\/price/, (msg, match) => {
         titles[i]
       ).text()} - ${$(prices[0]).text()}</a>\n`;
     }
-    bot.sendMessage(id, msg, {
+    bot.sendMessage(chatId, msg, {
       parse_mode: 'HTML'
     });
   });
