@@ -20,7 +20,7 @@ bot.onText(/\/start/, (msg, match) => {
 
 bot.onText(/\/contacts/, (msg, match) => {
   const chatId = msg.chat.id;
-  const resp = `Наши контакты:\n📞 +38 (000) 111-11-11\n📞 +38 (111) 222-22-22\n➖➖➖➖➖➖➖➖➖➖➖\nНаш сайт:\n[🌐 ](http::/rost-d.com/box/)`;
+  const resp = `Наши контакты:\n📞 +38 (000) 111-11-11\n📞 +38 (111) 222-22-22\n➖➖➖➖➖➖➖➖➖➖➖\nНаш сайт:\n[🌐 http::/rost-d.com/box/](http::/rost-d.com/box/)`;
 
   bot.sendMessage(chatId, resp, {
     parse_mode: 'Markdown'
