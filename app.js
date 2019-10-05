@@ -30,7 +30,7 @@ bot.onText(/\/contacts/, (msg, match) => {
 
 bot.onText(/\/price/, (msg, match) => {
   const chatId = msg.chat.id;
-  let msg = '';
+  let resp = '';
   needle.get(url, function(err, res) {
     if (err) throw err;
 
@@ -40,11 +40,11 @@ bot.onText(/\/price/, (msg, match) => {
     const links = $('.product-image-wrapper > a');
 
     for (let i = 0; i < titles.length; i++) {
-      msg += `👉 <a href="${$(links[i]).attr('href')}">${$(
+      resp += `👉 <a href="${$(links[i]).attr('href')}">${$(
         titles[i]
       ).text()} - ${$(prices[0]).text()}</a>\n`;
     }
-    bot.sendMessage(chatId, msg, {
+    bot.sendMessage(chatId, resp, {
       parse_mode: 'HTML'
     });
   });
