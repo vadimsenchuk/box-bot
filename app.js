@@ -35,7 +35,7 @@ bot.onText(/\/price/, (msg, match) => {
 
     const $ = cheerio.load(res.body);
     const titles = $(".product-outer h2");
-    const prices = $(".product-outer .woocommerce-Price-amount");
+    const prices = $(".product-outer .price > .woocommerce-Price-amount");
     const links = $(".product-image-wrapper > a");
 
     for (let i = 0; i < titles.length; i++) {
