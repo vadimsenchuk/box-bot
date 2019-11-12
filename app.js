@@ -41,7 +41,7 @@ bot.onText(/\/price/, (msg, match) => {
     for (let i = 0; i < titles.length; i++) {
       resp += `👉 <a href="${$(links[i]).attr("href")}">${$(
         titles[i]
-      ).text()} - ${$(prices[0]).text()}</a>\n\n`;
+      ).text()} - ${$(prices[i]).text()}</a>\n\n`;
     }
     bot.sendMessage(chatId, resp, {
       parse_mode: "HTML"
